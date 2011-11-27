@@ -91,7 +91,7 @@ module GetText
       
       def default_options
         if defined? Rails
-          YAML.load_file([Rails.root.to_s, 'config', 'one_sky.yml'].join('/')).symbolize_keys
+          YAML.load_file(File.join(Rails.root.to_s, 'config', 'one_sky.yml')).symbolize_keys
         else
           {:api_key => ENV["ONESKY_API_KEY"], :api_secret => ENV["ONESKY_API_SECRET"], :project => ENV["ONESKY_PROJECT"]}
         end
@@ -99,7 +99,7 @@ module GetText
       
       def po_dir_path(path)
         if defined? Rails
-          path ||= [Rails.root.to_s, "po"].join("/")
+          path ||= File.join(Rails.root.to_s, "po")
         else
           raise ArgumentError, "Please supply the po directory path where locale files are to be downloaded." unless path && File.directory?(path)
           path = path.chop if path =~ /\/$/
@@ -153,7 +153,7 @@ module GetText
       
       def parse_translated_file(path=nil)
         if defined? Rails
-          path ||= File.join(RAILS_ROOT, '/po', "**/*.po")
+          path ||= File.join(Rails.root.to_s, '/po', "**/*.po")
         else
           raise ArgumentError, "Please supply the path where the .po file is located." unless path
           path = path.chop if path =~ /\/$/
