@@ -1,6 +1,6 @@
 require 'gettext/tools/poparser'
 require 'gettext/tools/rmsgmerge'
-require 'gettext-one_sky/my_po_data'
+require 'gettext/one_sky/my_po_data'
 
 module GetText
   module OneSky

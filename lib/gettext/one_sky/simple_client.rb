@@ -1,4 +1,4 @@
-require 'gettext-one_sky/my_po_parser'
+require 'gettext/one_sky/my_po_parser'
 
 module GetText
   module OneSky

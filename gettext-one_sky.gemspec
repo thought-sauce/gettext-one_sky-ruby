@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "gettext-one_sky/version"
+require "gettext/one_sky/version"
 
 Gem::Specification.new do |s|
   s.name        = "gettext-one_sky"
