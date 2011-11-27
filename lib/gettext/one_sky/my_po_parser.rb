@@ -1,4 +1,4 @@
-require 'gettext/tools/poparser'
+require 'gettext/poparser'
 require 'gettext/tools/rmsgmerge'
 require 'gettext/one_sky/my_po_data'
 
